@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 2346093}
   - component: {fileID: 2346092}
   - component: {fileID: 2346091}
+  - component: {fileID: 2346094}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -206,6 +207,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2346094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2346090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56666c5a40171f54783dd416a44f42bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EventMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_MaxRayIntersections: 0
 --- !u!1 &44705290
 GameObject:
   m_ObjectHideFlags: 0
@@ -252,7 +269,6 @@ MonoBehaviour:
   videoPlayer: {fileID: 911897093}
   panelObject: {fileID: 330021973}
   optionsObject: {fileID: 220024026}
-  dialogueTextObject: {fileID: 413953422}
   endScreen: {fileID: 1769637917}
   monokuma: {fileID: 11400000, guid: de8929949a108d449871c0e6317d2b77, type: 2}
   monokumaDialogues: {fileID: 11400000, guid: e928f0ca794ca0d44ade2ee342982ac2, type: 2}
@@ -615,11 +631,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &413953422 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1830770068398704007, guid: 19f76135e4b366a46a01a458abd9751d, type: 3}
-  m_PrefabInstance: {fileID: 413953419}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &413953423 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1830770067693182586, guid: 19f76135e4b366a46a01a458abd9751d, type: 3}

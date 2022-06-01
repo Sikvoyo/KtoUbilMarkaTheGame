@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class Clue : MonoBehaviour
+public class Clue : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] List<DialoguePhrase> myDialogue;
     [SerializeField] Sprite mySprite;
@@ -15,6 +16,7 @@ public class Clue : MonoBehaviour
     void Start()
     {
         dialogueSystem = FindObjectOfType<DialogueSystem>();
+        dialogueText = FindObjectOfType<DialogueText>();
         CreateCharacterObject();
     }
 
@@ -32,7 +34,7 @@ public class Clue : MonoBehaviour
         
     }
 
-    private void OnMouseDown() 
+    public void OnPointerClick(PointerEventData pointerEventData)
     {
         Debug.Log("работает?");
         dialogueSystem.SetNewDialogue(myCharacter);
