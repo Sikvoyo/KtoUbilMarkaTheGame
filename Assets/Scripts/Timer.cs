@@ -7,10 +7,10 @@ using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
-    [SerializeField] float startTimeInSeconds;
+    [SerializeField] float startTimeInSeconds = 10f*60f;
     [SerializeField] TextMeshProUGUI timerText;
     [SerializeField] Music music;
-    [SerializeField] float whenToStart = 9f*60f+24f;
+    [SerializeField] float whenToStart = 9f*60f+24f+0.6f;
 
     float timeInSeconds;
 
@@ -28,7 +28,7 @@ public class Timer : MonoBehaviour
     
     void Start()
     {
-        
+        Invoke(nameof(StartMusic), startTimeInSeconds - whenToStart);
     }
 
     IEnumerator UpdateTimer()
@@ -39,7 +39,6 @@ public class Timer : MonoBehaviour
             timeInSeconds--;
             timerText.text = ConvertNumberToTime(timeInSeconds);
 
-            CheckIfItsTimeToStartMusic();
             CheckIfTimeIsOut();
         }
     }
@@ -48,20 +47,16 @@ public class Timer : MonoBehaviour
     {
         if (timeInSeconds <= 0)
         {
-            Destroy(FindObjectOfType<Music>().gameObject);
+            // Destroy(FindObjectOfType<Music>().gameObject);
+            FindObjectOfType<Music>().audioSource.Stop();
             SceneManager.LoadScene("KtoUbil");
             Destroy(gameObject);
         }
     }
 
-    private void CheckIfItsTimeToStartMusic()
+    private void StartMusic()
     {
-        if (music.IsPlaying()) return;
-
-        if (timeInSeconds <= whenToStart )
-        {
-            music.StartMusic();
-        }
+        music.StartMusic();
     }
 
     private string ConvertNumberToTime(float num)

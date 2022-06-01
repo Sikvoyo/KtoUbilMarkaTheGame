@@ -402,10 +402,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueText
       objectReference: {fileID: 0}
-    - target: {fileID: 1830770068398704007, guid: 19f76135e4b366a46a01a458abd9751d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19f76135e4b366a46a01a458abd9751d, type: 3}
 --- !u!1 &312162487 stripped

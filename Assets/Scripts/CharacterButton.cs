@@ -11,6 +11,7 @@ public class CharacterButton : MonoBehaviour
 
     public void OnButtonPressed()
     {
+        Debug.Log("работает");
         oprosnikiManager.ChangeCharacter(myCharacter);
     }
 }

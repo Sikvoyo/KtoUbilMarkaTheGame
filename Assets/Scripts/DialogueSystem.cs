@@ -39,6 +39,7 @@ public class DialogueSystem : MonoBehaviour
 
     public void SetNewDialogue(CharacterObject newSpeaker)
     {
+        dialogueText.EnableText();
         currentSpeaker = newSpeaker;
         currentPhraseIndex = 0;
         UpdateText();

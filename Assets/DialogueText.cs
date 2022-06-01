@@ -4,13 +4,24 @@ using UnityEngine;
 
 public class DialogueText : MonoBehaviour
 {
+    [SerializeField] bool onAwake;
+
+    GameObject contents;
+
+    private void Awake() 
+    {
+        contents = GameObject.Find("Contents");
+        if (!onAwake)
+            DisableText();
+    }
+
     public void EnableText()
     {
-        gameObject.SetActive(true);
+        contents.SetActive(true);
     }
 
     public void DisableText()
     {
-        gameObject.SetActive(false);
+        contents.SetActive(false);
     }
 }

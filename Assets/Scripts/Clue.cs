@@ -12,6 +12,8 @@ public class Clue : MonoBehaviour, IPointerClickHandler
     DialogueText dialogueText;
     CharacterObject myCharacter;
 
+    bool hovered = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,5 +41,15 @@ public class Clue : MonoBehaviour, IPointerClickHandler
         Debug.Log("работает?");
         dialogueSystem.SetNewDialogue(myCharacter);
         dialogueText.EnableText();
+    }
+
+    public void OnPointerEnter(PointerEventData pointerEventData)
+    {
+        hovered = true;
+    }
+
+    public void OnPointerExit(PointerEventData pointerEventData)
+    {
+        hovered = false;
     }
 }

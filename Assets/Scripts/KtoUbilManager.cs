@@ -45,7 +45,7 @@ public class KtoUbilManager : MonoBehaviour
 
     public void OnOptionChosen(CharacterObject characterObject)
     {
-        dialogueText.EnableText();
+        FindObjectOfType<DialogueText>().EnableText();
         optionsObject.SetActive(false);
         if (characterObject == monokuma)
         {
