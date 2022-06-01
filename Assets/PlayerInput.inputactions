@@ -1,0 +1,52 @@
+{
+    "name": "PlayerInput",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "0157e3b1-3497-44c6-83b0-f5c83beb478a",
+            "actions": [
+                {
+                    "name": "Go to room A",
+                    "type": "Button",
+                    "id": "23be093f-a7d1-4a74-a52b-8d952b7ca0eb",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Go to room B",
+                    "type": "Button",
+                    "id": "cef17662-bbe4-46b7-ab7d-db90a1573174",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "76e07664-3eb0-403f-a293-5f7665ad762b",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Go to room A",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "517c11e2-b17f-4342-bde9-37e8a77dcff2",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Go to room B",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
