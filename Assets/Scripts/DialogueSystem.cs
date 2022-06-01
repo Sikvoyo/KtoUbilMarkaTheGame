@@ -18,6 +18,7 @@ public class DialogueSystem : MonoBehaviour
 
     CharacterObject currentSpeaker;
     OprosnikiManager oprosnikiManager;
+    DialogueText dialogueText;
 
     public event Action OnLastPhrase;
 
@@ -29,6 +30,7 @@ public class DialogueSystem : MonoBehaviour
     private void Start() 
     {
         oprosnikiManager = GetComponent<OprosnikiManager>();
+        dialogueText = FindObjectOfType<DialogueText>();
     }
 
     private void Update() {
@@ -49,6 +51,7 @@ public class DialogueSystem : MonoBehaviour
         if (currentPhraseIndex + 1 == currentSpeaker.dialogue.Count)
         {
             OnLastPhrase?.Invoke();
+            dialogueText.DisableText();
             return;
         }
 

@@ -9,7 +9,6 @@ public class KtoUbilManager : MonoBehaviour
     [SerializeField] VideoPlayer videoPlayer;
     [SerializeField] Transform panelObject;
     [SerializeField] GameObject optionsObject;
-    [SerializeField] GameObject dialogueTextObject;
     [SerializeField] GameObject endScreen;
 
     [Space(10)]
@@ -26,6 +25,7 @@ public class KtoUbilManager : MonoBehaviour
 
 
     DialogueSystem dialogueSystem;
+    DialogueText dialogueText;
 
     // Start is called before the first frame update
     void Start()
@@ -33,7 +33,7 @@ public class KtoUbilManager : MonoBehaviour
         videoPlayer.loopPointReached += ShowOptions;
         dialogueSystem = FindObjectOfType<DialogueSystem>();
         dialogueSystem.OnLastPhrase += HandleDialogueEnd;
-
+        dialogueText = FindObjectOfType<DialogueText>();
     }
 
     private void ShowOptions(VideoPlayer source)
@@ -45,7 +45,7 @@ public class KtoUbilManager : MonoBehaviour
 
     public void OnOptionChosen(CharacterObject characterObject)
     {
-        dialogueTextObject.SetActive(true);
+        dialogueText.EnableText();
         optionsObject.SetActive(false);
         if (characterObject == monokuma)
         {
@@ -61,7 +61,7 @@ public class KtoUbilManager : MonoBehaviour
     {
         dialogueSystem.OnLastPhrase -= HandleDialogueEnd;
         endScreen.SetActive(true);
-        dialogueTextObject.SetActive(false);
+        dialogueText.EnableText();
         if (dialogueSystem.CurrentSpeaker == monokumaDialogues)
         {
             endScreen.GetComponent<SpriteRenderer>().sprite = win;
