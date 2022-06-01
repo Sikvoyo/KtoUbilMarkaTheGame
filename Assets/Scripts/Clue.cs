@@ -15,6 +15,7 @@ public class Clue : MonoBehaviour
     void Start()
     {
         dialogueSystem = FindObjectOfType<DialogueSystem>();
+        dialogueText = FindObjectOfType<DialogueText>();
         CreateCharacterObject();
     }
 
@@ -34,7 +35,7 @@ public class Clue : MonoBehaviour
 
     private void OnMouseDown() 
     {
-        Debug.Log("работает?");
+        Debug.Log(dialogueText == null);
         dialogueSystem.SetNewDialogue(myCharacter);
         dialogueText.EnableText();
     }
