@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Localization.Settings;
 
 public class CharacterButton : MonoBehaviour
 {
-    [SerializeField] CharacterObject myCharacter;
+    [SerializeField] CharacterObject myCharacterRU;
+    [SerializeField] CharacterObject myCharacterEN;
     
     [Header("Компоненты")]
     [SerializeField] OprosnikiManager oprosnikiManager;
@@ -12,6 +14,6 @@ public class CharacterButton : MonoBehaviour
     public void OnButtonPressed()
     {
         Debug.Log("работает");
-        oprosnikiManager.ChangeCharacter(myCharacter);
+        oprosnikiManager.ChangeCharacter(LocalizationSettings.SelectedLocale.name == "English (en)" ? myCharacterEN : myCharacterRU);
     }
 }

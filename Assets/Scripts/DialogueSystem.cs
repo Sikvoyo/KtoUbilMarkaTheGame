@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using UnityEngine.Localization.Settings;
 
 public class DialogueSystem : MonoBehaviour
 {
@@ -10,7 +11,8 @@ public class DialogueSystem : MonoBehaviour
     [SerializeField] TextMeshProUGUI phraseText;
     [SerializeField] GameObject continueArrow;
 
-    [SerializeField] string mainCharacterName = "Детектив Павел";
+    [SerializeField] string mainCharacterNameRU = "Детектив Павел";
+    [SerializeField] string mainCharacterNameEN = "Detective Morbius";
     [SerializeField] float typingSpeed = 0.2f;
 
     int currentPhraseIndex = 0;
@@ -39,6 +41,8 @@ public class DialogueSystem : MonoBehaviour
 
     public void SetNewDialogue(CharacterObject newSpeaker)
     {
+        StopAllCoroutines();
+
         dialogueText.EnableText();
         currentSpeaker = newSpeaker;
         currentPhraseIndex = 0;
@@ -90,7 +94,7 @@ public class DialogueSystem : MonoBehaviour
         }
         else
         {
-            whoSaysText.text = mainCharacterName;
+            whoSaysText.text = LocalizationSettings.SelectedLocale.name == "English (en)" ? mainCharacterNameEN : mainCharacterNameRU;
         }
     }
 }

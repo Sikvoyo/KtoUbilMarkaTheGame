@@ -271,8 +271,10 @@ MonoBehaviour:
   optionsObject: {fileID: 220024026}
   endScreen: {fileID: 1769637917}
   monokuma: {fileID: 11400000, guid: de8929949a108d449871c0e6317d2b77, type: 2}
-  monokumaDialogues: {fileID: 11400000, guid: e928f0ca794ca0d44ade2ee342982ac2, type: 2}
-  otherDialogues: {fileID: 11400000, guid: 00678b064fe4b2c489c104a0f858c31b, type: 2}
+  monokumaDialoguesRU: {fileID: 11400000, guid: e928f0ca794ca0d44ade2ee342982ac2, type: 2}
+  monokumaDialoguesEN: {fileID: 11400000, guid: 185fdfed0813d9549af7374d2cbbb29e, type: 2}
+  otherDialoguesRU: {fileID: 11400000, guid: 00678b064fe4b2c489c104a0f858c31b, type: 2}
+  otherDialoguesEN: {fileID: 11400000, guid: 6abad0be3bcaf0440ae839f4acd74a22, type: 2}
   mayorSprite: {fileID: 0}
   win: {fileID: 21300000, guid: 32af7386c1941bf4cb5bc5c13a83bf2f, type: 3}
   loss: {fileID: 21300000, guid: 83078be307cbfe8408476a2f8363727f, type: 3}

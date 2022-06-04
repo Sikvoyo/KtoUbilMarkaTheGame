@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
+using UnityEngine.Localization.Settings;
 
 public class KtoUbilManager : MonoBehaviour
 {
@@ -17,8 +18,10 @@ public class KtoUbilManager : MonoBehaviour
 
     [Space(5)]
 
-    [SerializeField] CharacterObject monokumaDialogues;
-    [SerializeField] CharacterObject otherDialogues;
+    [SerializeField] CharacterObject monokumaDialoguesRU;
+    [SerializeField] CharacterObject monokumaDialoguesEN;
+    [SerializeField] CharacterObject otherDialoguesRU;
+    [SerializeField] CharacterObject otherDialoguesEN;
     [SerializeField] Sprite mayorSprite;
     [SerializeField] Sprite win;
     [SerializeField] Sprite loss;
@@ -49,11 +52,11 @@ public class KtoUbilManager : MonoBehaviour
         optionsObject.SetActive(false);
         if (characterObject == monokuma)
         {
-            dialogueSystem.SetNewDialogue(monokumaDialogues);
+            dialogueSystem.SetNewDialogue(LocalizationSettings.SelectedLocale.name == "English (en)" ? monokumaDialoguesEN : monokumaDialoguesRU);
         }
         else
         {
-            dialogueSystem.SetNewDialogue(otherDialogues);
+            dialogueSystem.SetNewDialogue(LocalizationSettings.SelectedLocale.name == "English (en)" ? otherDialoguesEN : otherDialoguesRU);
         }
     }
 
@@ -62,11 +65,11 @@ public class KtoUbilManager : MonoBehaviour
         dialogueSystem.OnLastPhrase -= HandleDialogueEnd;
         endScreen.SetActive(true);
         dialogueText.EnableText();
-        if (dialogueSystem.CurrentSpeaker == monokumaDialogues)
+        if (dialogueSystem.CurrentSpeaker == monokumaDialoguesRU || dialogueSystem.CurrentSpeaker == monokumaDialoguesEN)
         {
             endScreen.GetComponent<SpriteRenderer>().sprite = win;
         }
-        else if (dialogueSystem.CurrentSpeaker == otherDialogues)
+        else if (dialogueSystem.CurrentSpeaker == otherDialoguesRU || dialogueSystem.CurrentSpeaker == otherDialoguesEN)
         {
             endScreen.GetComponent<SpriteRenderer>().sprite = loss;
         }

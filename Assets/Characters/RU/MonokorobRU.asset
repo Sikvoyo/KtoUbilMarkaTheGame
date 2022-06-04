@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 643ba1664568376499e9eca37d3e9c5f, type: 3}
-  m_Name: Monokorob
+  m_Name: MonokorobRU
   m_EditorClassIdentifier: 
   characterName: "\u041C\u043E\u043D\u043E\u043A\u043E\u0440\u043E\u0431"
   characterSprite: {fileID: 21300000, guid: 87bfa1ef768f21a44ad7b8ca26bc66e3, type: 3}

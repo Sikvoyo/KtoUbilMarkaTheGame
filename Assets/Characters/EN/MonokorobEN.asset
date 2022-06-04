@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 643ba1664568376499e9eca37d3e9c5f, type: 3}
+  m_Name: MonokorobEN
+  m_EditorClassIdentifier: 
+  characterName: Monokorob
+  characterSprite: {fileID: 21300000, guid: 87bfa1ef768f21a44ad7b8ca26bc66e3, type: 3}
+  dialogue:
+  - phrase: Yo, dude, I see you suspect me, right? Cuz I have a black face and a
+      red eye and stuff.
+    doISayThat: 1
+  - phrase: But hear me out, I'm not a culprit! There's gotta be an evidence that
+      proves my innocence and a killer that looks the same as I do.
+    doISayThat: 1
+  - phrase: I can tell you something. Listen carefully!
+    doISayThat: 1
+  - phrase: Mark was killed shortly after he got free from Mayor's kidnapping. What
+      if Mayor is related to this case?
+    doISayThat: 1
+  - phrase: We have always seen a mayor as an old guy but he must be someone else.
+      There is, indeed, a true Mayor, not the one we know.
+    doISayThat: 1
+  - phrase: You know, it's pretty clear now after a specific book about it is out
+      now. A true Mayor is a drug emperor!
+    doISayThat: 1
+  - phrase: He must be AMONG US, I am not kidding, man.
+    doISayThat: 1
+  - phrase: Where were you at the time of the murder
+    doISayThat: 0
+  - phrase: I was hanging out with my friend Finger, dude.
+    doISayThat: 1
+  - phrase: Anyway, good luck in this case, pal.
+    doISayThat: 1

@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 643ba1664568376499e9eca37d3e9c5f, type: 3}
+  m_Name: AsukaEN
+  m_EditorClassIdentifier: 
+  characterName: "\u0410\u0441\u043A\u0430"
+  characterSprite: {fileID: 21300000, guid: 32af7386c1941bf4cb5bc5c13a83bf2f, type: 3}
+  dialogue:
+  - phrase: Hey! If you falsely accuse me, you are not going to get away with this!
+      I am (not) related in this whole situation, why are you suspecting me?
+    doISayThat: 1
+  - phrase: Where were you?
+    doISayThat: 0
+  - phrase: 'I... I was with Mayor. I am his daughter, do you understand that? '
+    doISayThat: 1
+  - phrase: Mayor will arrest you if you'll accuse me and shit.
+    doISayThat: 1
+  - phrase: What about Mayor?
+    doISayThat: 0
+  - phrase: I get it, he hates Mark and wants to beat the shit out of him, however,
+      he  would never kill Mark. We live in Gorgorod, silly.
+    doISayThat: 1
+  - phrase: In Gorgorod you don't die because of Mayor, but because of yourself.
+    doISayThat: 1
+  - phrase: Why did Mayor kidnap Mark?
+    doISayThat: 0
+  - phrase: Mayor had to teach him a lesson after he wrote that bullshit so-called
+      "Polygon"
+    doISayThat: 1
+  - phrase: Could you tell me what Polygon was about?
+    doISayThat: 0
+  - phrase: It's about the end of Gorgorod that was a consequence of bad goverment's
+      decisions, shit like that.
+    doISayThat: 1
+  - phrase: Now go find the truth, Detective Morbius! Mayor will fire you if you
+      won't find the culprit.
+    doISayThat: 1
+  - phrase: But why does Mayor need to know who killed Mark?
+    doISayThat: 0
+  - phrase: Mayor of Gorgorod is a good man. Justice is the main shit he cares about
+      when it comes to Gorgorod, he must punish the killer.
+    doISayThat: 1
+  - phrase: Why your footprints are there?
+    doISayThat: 0
+  - phrase: 'Arghh, yes, I was passing by minding my own business (something you
+      definetly can''t do). '
+    doISayThat: 1
+  - phrase: I am Mark's only girl. He called me something like "Devochka Pizdec".
+      He went there to talk with me and shortly after he got shot with a pistol.
+    doISayThat: 1
+  - phrase: However, it can (not) be me. You must know why! Is that all, I am getting
+      tired here!
+    doISayThat: 1

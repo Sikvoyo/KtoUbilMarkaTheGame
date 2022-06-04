@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 643ba1664568376499e9eca37d3e9c5f, type: 3}
+  m_Name: MonokorobChosenEN
+  m_EditorClassIdentifier: 
+  characterName: Mayor
+  characterSprite: {fileID: 0}
+  dialogue:
+  - phrase: MONOKOROB! It was you!
+    doISayThat: 0
+  - phrase: You are very smart, Detective Morbius!
+    doISayThat: 1
+  - phrase: Yes, it was me! I am the true Mayor.
+    doISayThat: 1
+  - phrase: I killed Mark.
+    doISayThat: 1
+  - phrase: We will arrest you and find the new Mayor.
+    doISayThat: 0
+  - phrase: Wow... really?
+    doISayThat: 1
+  - phrase: It was just a show, Morbius.
+    doISayThat: 1
+  - phrase: You will die right there.
+    doISayThat: 1
+  - phrase: No one will find out about your death. I'll take care about that.
+    doISayThat: 1
+  - phrase: What?
+    doISayThat: 0

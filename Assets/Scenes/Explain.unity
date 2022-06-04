@@ -326,7 +326,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0459133480870b49b4df431bbfaebfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mayor: {fileID: 11400000, guid: 039fa3ae57245c249b07aa32f33a5099, type: 2}
+  mayorRU: {fileID: 11400000, guid: 039fa3ae57245c249b07aa32f33a5099, type: 2}
+  mayorEN: {fileID: 11400000, guid: abb816fb0b2047348a423944f8d90d17, type: 2}
 --- !u!4 &375911349
 Transform:
   m_ObjectHideFlags: 0

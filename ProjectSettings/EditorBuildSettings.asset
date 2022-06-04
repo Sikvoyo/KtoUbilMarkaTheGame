@@ -23,4 +23,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/KtoUbil.unity
     guid: 750bfca5cf5948948a84de3411e1de61
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 11dbde5bddab33f4599ab90ee904f6b4, type: 2}
+    com.unity.localization.settings: {fileID: 11400000, guid: 03b28a038fb157f4584d33679742db19, type: 2}

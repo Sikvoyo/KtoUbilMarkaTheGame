@@ -16,13 +16,11 @@ public class InputManager : MonoBehaviour
             case domScene:
                 SceneManager.LoadScene(dorogaScene);
                 break;
-            case dorogaScene:
             case oprosnikiScene:
                 SceneManager.LoadScene(domScene);
                 break;
             default:
-                Debug.LogWarning("Нету подходящей сцены для этой ситуации.");
-                break;
+                return;
         }
     }
 
@@ -31,6 +29,10 @@ public class InputManager : MonoBehaviour
         if (SceneManager.GetActiveScene().name == domScene)
         {
             SceneManager.LoadScene(oprosnikiScene);
+        }
+        else if (SceneManager.GetActiveScene().name == dorogaScene)
+        {
+            SceneManager.LoadScene(domScene);
         }
     }
 }

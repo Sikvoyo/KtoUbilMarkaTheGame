@@ -45,5 +45,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whoSaysText: {fileID: 0}
   phraseText: {fileID: 0}
-  mainCharacterName: "\u0414\u0435\u0442\u0435\u043A\u0442\u0438\u0432 \u041F\u0430\u0432\u0435\u043B"
+  continueArrow: {fileID: 0}
+  mainCharacterNameRU: "\u0414\u0435\u0442\u0435\u043A\u0442\u0438\u0432 \u041F\u0430\u0432\u0435\u043B"
   typingSpeed: 0.01

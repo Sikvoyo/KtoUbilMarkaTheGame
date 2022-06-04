@@ -1,18 +1,22 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Localization.Settings;
 
 public class Clue : MonoBehaviour, IPointerClickHandler
 {
-    [SerializeField] List<DialoguePhrase> myDialogue;
+    [SerializeField] List<DialoguePhrase> myDialogueRU;
+    [SerializeField] List<DialoguePhrase> myDialogueEN;
     [SerializeField] Sprite mySprite;
 
     DialogueSystem dialogueSystem;
     DialogueText dialogueText;
     CharacterObject myCharacter;
 
-    bool hovered = false;
+    // bool hovered = false;
+    bool isTalking = false;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +31,7 @@ public class Clue : MonoBehaviour, IPointerClickHandler
         myCharacter = CharacterObject.CreateInstance<CharacterObject>();
         myCharacter.characterName = gameObject.name;
         myCharacter.characterSprite = mySprite;
-        myCharacter.dialogue = myDialogue;
+        myCharacter.dialogue = LocalizationSettings.SelectedLocale.name == "English (en)" ? myDialogueEN : myDialogueRU;
     }
 
     // Update is called once per frame
@@ -38,18 +42,27 @@ public class Clue : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData pointerEventData)
     {
-        Debug.Log("работает?");
+        if (isTalking) return;
+
+        isTalking = true;
         dialogueSystem.SetNewDialogue(myCharacter);
         dialogueText.EnableText();
+        dialogueSystem.OnLastPhrase += StopTalking;
     }
 
-    public void OnPointerEnter(PointerEventData pointerEventData)
+    private void StopTalking()
     {
-        hovered = true;
+        isTalking = false;
+        dialogueSystem.OnLastPhrase -= StopTalking;
     }
 
-    public void OnPointerExit(PointerEventData pointerEventData)
-    {
-        hovered = false;
-    }
+    // public void OnPointerEnter(PointerEventData pointerEventData)
+    // {
+    //     hovered = true;
+    // }
+
+    // public void OnPointerExit(PointerEventData pointerEventData)
+    // {
+    //     hovered = false;
+    // }
 }
