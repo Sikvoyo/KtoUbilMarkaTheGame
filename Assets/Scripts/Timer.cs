@@ -1,18 +1,16 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using System;
-using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
     [SerializeField] float startTimeInSeconds = 10f*60f;
     [SerializeField] TextMeshProUGUI timerText;
     [SerializeField] Music music;
-    [SerializeField] float whenToStart = 9f*60f+24f+0.6f;
 
     float timeInSeconds;
+
+    KUMSceneManager kUMSceneManager;
 
     public float TimeInSeconds
     {
@@ -22,13 +20,10 @@ public class Timer : MonoBehaviour
     private void Awake() 
     {
         ProcessSingelton();
+        kUMSceneManager = FindObjectOfType<KUMSceneManager>();
         timeInSeconds = startTimeInSeconds;
         StartCoroutine(UpdateTimer());
-    }
-    
-    void Start()
-    {
-        Invoke(nameof(StartMusic), startTimeInSeconds - whenToStart);
+
     }
 
     IEnumerator UpdateTimer()
@@ -49,14 +44,9 @@ public class Timer : MonoBehaviour
         {
             // Destroy(FindObjectOfType<Music>().gameObject);
             FindObjectOfType<Music>().audioSource.Stop();
-            SceneManager.LoadScene("KtoUbil");
+            kUMSceneManager.LoadScene("KtoUbil");
             Destroy(gameObject);
         }
-    }
-
-    private void StartMusic()
-    {
-        music.StartMusic();
     }
 
     private string ConvertNumberToTime(float num)

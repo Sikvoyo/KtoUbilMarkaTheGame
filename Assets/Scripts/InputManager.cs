@@ -9,15 +9,21 @@ public class InputManager : MonoBehaviour
     const string dorogaScene = "Doroga";
     const string oprosnikiScene = "Oprosniki";
 
+    KUMSceneManager kUMSceneManager;
+
+    private void Awake() {
+        kUMSceneManager = FindObjectOfType<KUMSceneManager>();
+    }
+
     public void GoToRoomA()
     {
         switch (SceneManager.GetActiveScene().name)
         {
             case domScene:
-                SceneManager.LoadScene(dorogaScene);
+                kUMSceneManager.LoadScene(dorogaScene);
                 break;
             case oprosnikiScene:
-                SceneManager.LoadScene(domScene);
+                kUMSceneManager.LoadScene(domScene);
                 break;
             default:
                 return;
@@ -28,11 +34,11 @@ public class InputManager : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == domScene)
         {
-            SceneManager.LoadScene(oprosnikiScene);
+            kUMSceneManager.LoadScene(oprosnikiScene);
         }
         else if (SceneManager.GetActiveScene().name == dorogaScene)
         {
-            SceneManager.LoadScene(domScene);
+            kUMSceneManager.LoadScene(domScene);
         }
     }
 }

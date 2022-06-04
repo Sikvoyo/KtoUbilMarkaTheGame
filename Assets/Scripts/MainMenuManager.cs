@@ -9,6 +9,6 @@ public class MainMenuManager : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene(explainSceneName);
+        FindObjectOfType<KUMSceneManager>().LoadScene(explainSceneName);
     }
 }

@@ -1,8 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.Localization.Settings;
 
 public class ExplainManager : MonoBehaviour
@@ -23,7 +19,7 @@ public class ExplainManager : MonoBehaviour
 
     private void LoadDomScene()
     {
-        SceneManager.LoadScene("Dom");
+        FindObjectOfType<KUMSceneManager>().LoadScene("Dom");
         dialogueSystem.OnLastPhrase -= LoadDomScene;
     }
 }
