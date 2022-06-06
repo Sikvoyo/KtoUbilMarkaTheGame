@@ -10,8 +10,6 @@ public class Timer : MonoBehaviour
 
     float timeInSeconds;
 
-    KUMSceneManager kUMSceneManager;
-
     public float TimeInSeconds
     {
         get {return timeInSeconds;}
@@ -20,7 +18,6 @@ public class Timer : MonoBehaviour
     private void Awake() 
     {
         ProcessSingelton();
-        kUMSceneManager = FindObjectOfType<KUMSceneManager>();
         timeInSeconds = startTimeInSeconds;
         StartCoroutine(UpdateTimer());
 
@@ -42,9 +39,10 @@ public class Timer : MonoBehaviour
     {
         if (timeInSeconds <= 0)
         {
-            // Destroy(FindObjectOfType<Music>().gameObject);
-            FindObjectOfType<Music>().audioSource.Stop();
-            kUMSceneManager.LoadScene("KtoUbil");
+            Music music = FindObjectOfType<Music>();
+            music.audioSource.Stop();
+            music.playFootsteps = false;
+            FindObjectOfType<KUMSceneManager>().LoadScene("KtoUbil");
             Destroy(gameObject);
         }
     }

@@ -7,12 +7,15 @@ public class DialogueText : MonoBehaviour
     [SerializeField] bool onAwake;
 
     GameObject contents;
+    DialogueSystem dialogueSystem;
 
     private void Awake() 
     {
         contents = GameObject.Find("Contents");
         if (!onAwake)
             DisableText();
+
+        dialogueSystem = FindObjectOfType<DialogueSystem>();
     }
 
     public void EnableText()
@@ -23,5 +26,13 @@ public class DialogueText : MonoBehaviour
     public void DisableText()
     {
         contents.SetActive(false);
+    }
+
+    public void OnDisappearAnimation()
+    {
+        if (!dialogueSystem.IsTalking)
+        {
+            DisableText();
+        }
     }
 }

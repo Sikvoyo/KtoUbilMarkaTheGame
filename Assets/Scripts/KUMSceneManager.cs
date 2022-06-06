@@ -11,6 +11,9 @@ public class KUMSceneManager : MonoBehaviour
 
     public void LoadScene(string sceneName)
     {
+        Music music = FindObjectOfType<Music>();
+        if (music)
+            music.PlayFootsteps();
         StartCoroutine(LoadAnimation(sceneName));
     }
 

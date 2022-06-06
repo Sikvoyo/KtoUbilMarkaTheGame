@@ -141,3 +141,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 8960746077886025135}
+  footsteps: {fileID: 8300000, guid: b0151607279c2c34ca30f11d9835927a, type: 3}

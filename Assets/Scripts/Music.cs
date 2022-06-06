@@ -5,6 +5,9 @@ using UnityEngine;
 public class Music : MonoBehaviour
 {
     public AudioSource audioSource;
+    public bool playFootsteps = true;
+
+    [SerializeField] AudioClip footsteps;
 
     private void Awake()
     {
@@ -33,5 +36,11 @@ public class Music : MonoBehaviour
     public bool IsPlaying()
     {
         return audioSource.isPlaying;
+    }
+
+    public void PlayFootsteps()
+    {   
+        if (!playFootsteps) return;
+        audioSource.PlayOneShot(footsteps);
     }
 }

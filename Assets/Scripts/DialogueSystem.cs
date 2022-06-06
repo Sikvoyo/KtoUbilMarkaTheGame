@@ -10,6 +10,8 @@ public class DialogueSystem : MonoBehaviour
     [SerializeField] TextMeshProUGUI whoSaysText;
     [SerializeField] TextMeshProUGUI phraseText;
     [SerializeField] GameObject continueArrow;
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] List<AudioClip> typewriteSounds;
 
     [SerializeField] string mainCharacterNameRU = "Детектив Павел";
     [SerializeField] string mainCharacterNameEN = "Detective Morbius";
@@ -21,6 +23,7 @@ public class DialogueSystem : MonoBehaviour
     CharacterObject currentSpeaker;
     OprosnikiManager oprosnikiManager;
     DialogueText dialogueText;
+    Animator animator;
 
     public event Action OnLastPhrase;
 
@@ -29,10 +32,16 @@ public class DialogueSystem : MonoBehaviour
         get { return currentSpeaker; }
     }
 
+    public bool IsTalking
+    {
+        get { return animator.GetBool("isTalking"); }
+    }
+
     private void Start() 
     {
         oprosnikiManager = GetComponent<OprosnikiManager>();
         dialogueText = FindObjectOfType<DialogueText>();
+        animator = dialogueText.GetComponent<Animator>();
     }
 
     private void Update() {
@@ -43,11 +52,13 @@ public class DialogueSystem : MonoBehaviour
     {
         StopAllCoroutines();
 
+        animator.SetBool("isTalking", true);
         dialogueText.EnableText();
         currentSpeaker = newSpeaker;
         currentPhraseIndex = 0;
         UpdateText();
     }
+
 
     public void NextPhrase()
     {
@@ -56,7 +67,8 @@ public class DialogueSystem : MonoBehaviour
         if (currentPhraseIndex + 1 == currentSpeaker.dialogue.Count)
         {
             OnLastPhrase?.Invoke();
-            dialogueText.DisableText();
+            // dialogueText.DisableText();
+            animator.SetBool("isTalking", false);
             return;
         }
 
@@ -77,6 +89,8 @@ public class DialogueSystem : MonoBehaviour
 
     private IEnumerator Type(string whatToType)
     {
+        audioSource.clip = typewriteSounds[UnityEngine.Random.Range(0, typewriteSounds.Count - 1)];
+        audioSource.Play();
         canContinue = false;
         foreach (char letter in whatToType)
         {
@@ -84,6 +98,7 @@ public class DialogueSystem : MonoBehaviour
             yield return new WaitForSeconds(typingSpeed);
         }
         canContinue = true;
+        audioSource.Stop();
     }
 
     private void UpdateCharacterName(CharacterObject characterSpeaking, bool doTheySpeak)

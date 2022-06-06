@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 643ba1664568376499e9eca37d3e9c5f, type: 3}
   m_Name: AsukaEN
   m_EditorClassIdentifier: 
-  characterName: "\u0410\u0441\u043A\u0430"
+  characterName: Asuka
   characterSprite: {fileID: 21300000, guid: 32af7386c1941bf4cb5bc5c13a83bf2f, type: 3}
   dialogue:
   - phrase: Hey! If you falsely accuse me, you are not going to get away with this!
