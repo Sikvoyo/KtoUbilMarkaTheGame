@@ -36,5 +36,5 @@ MonoBehaviour:
   - phrase: No! It must be a mistake.
     doISayThat: 0
   - phrase: Higher Beings don't make mistakes. Now let's go and say goodbye to your
-      family, will we?
+      family, shall we?
     doISayThat: 1

@@ -25,6 +25,7 @@ public class DialogueSystem : MonoBehaviour
     DialogueText dialogueText;
     Animator animator;
 
+    public event Action<CharacterObject, int> OnPhraseSaid;
     public event Action OnLastPhrase;
 
     public CharacterObject CurrentSpeaker
@@ -63,6 +64,8 @@ public class DialogueSystem : MonoBehaviour
     public void NextPhrase()
     {
         if (!canContinue) return;
+
+        OnPhraseSaid?.Invoke(currentSpeaker, currentPhraseIndex);
 
         if (currentPhraseIndex + 1 == currentSpeaker.dialogue.Count)
         {

@@ -26,5 +26,42 @@ MonoBehaviour:
     m_Localized: Play
     m_Metadata:
       m_Items: []
+  - m_Id: 1245723209293824
+    m_Localized: made by Maxim Burakov and Sidorenko Timur
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1858417339719680
+    m_Localized: Who killed Mark?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1955270039232512
+    m_Localized: Good Ending
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1955341581475840
+    m_Localized: Bad Ending
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1955406035345408
+    m_Localized: Monokorob killed Mark.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1955637288296448
+    m_Localized: Play Again
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1955774223933440
+    m_Localized: You couldn't find the killer and got killed.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1955925436981248
+    m_Localized: 'TIP: If you''d like to try again, you can press Scroll Lock to
+      get to the killer choice immediately.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957163243200512
+    m_Localized: You have found the killer, but then got shot
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

@@ -20,6 +20,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Jump to the vote",
+                    "type": "Button",
+                    "id": "138fabbc-de86-4af4-9dbf-1a8e5eec4b2a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Hold(duration=2)"
                 }
             ],
             "bindings": [
@@ -42,6 +50,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Go to room B",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "365c744c-f7e0-4a8f-9cf7-86dc14dad813",
+                    "path": "<Keyboard>/scrollLock",
+                    "interactions": "Hold(duration=2)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump to the vote",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

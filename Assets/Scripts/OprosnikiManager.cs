@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class OprosnikiManager : MonoBehaviour
 {
     [SerializeField] Image dialogueSprite;
+    [SerializeField] Animator animator;
 
     private CharacterObject characterSpeaking;
     
@@ -21,9 +22,7 @@ public class OprosnikiManager : MonoBehaviour
         if (newCharacter == characterSpeaking) return;
 
         characterSpeaking = newCharacter;
-
-        dialogueSprite.sprite = characterSpeaking.characterSprite;
-        dialogueSystem.SetNewDialogue(newCharacter);
+        dialogueSystem.SetNewDialogue(characterSpeaking);
     }
 
     public CharacterObject WhoSpeaks()

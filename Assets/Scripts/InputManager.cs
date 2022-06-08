@@ -41,4 +41,12 @@ public class InputManager : MonoBehaviour
             kUMSceneManager.LoadScene(domScene);
         }
     }
+    
+    public void JumpToTheVote()
+    {
+        Music music = FindObjectOfType<Music>();
+        music.audioSource.Stop();
+        music.playFootsteps = false;
+        FindObjectOfType<KUMSceneManager>().LoadScene("KtoUbil");
+    }
 }
