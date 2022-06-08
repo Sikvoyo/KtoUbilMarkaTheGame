@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MonokorobEN
   m_EditorClassIdentifier: 
   characterName: Monokorob
-  characterSprite: {fileID: 21300000, guid: 87bfa1ef768f21a44ad7b8ca26bc66e3, type: 3}
+  characterSprite: {fileID: 21300000, guid: 3bae66fc711990e4488138130345abc9, type: 3}
   dialogue:
   - phrase: Yo, dude, I see you suspect me, right? Cuz I have a black face and a
       red eye and stuff.

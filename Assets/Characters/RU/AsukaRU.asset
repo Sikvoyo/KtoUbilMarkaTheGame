@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AsukaRU
   m_EditorClassIdentifier: 
   characterName: "\u0410\u0441\u043A\u0430"
-  characterSprite: {fileID: 21300000, guid: 32af7386c1941bf4cb5bc5c13a83bf2f, type: 3}
+  characterSprite: {fileID: 21300000, guid: faef81b8396222c49b87e3c2c2990654, type: 3}
   dialogue:
   - phrase: "\u0421\u043B\u0443\u0448\u0430\u0439, \u0435\u0441\u043B\u0438 \u0442\u044B
       \u043C\u0435\u043D\u044F \u043B\u043E\u0436\u043D\u043E \u043E\u0431\u0432\u0438\u043D\u0438\u0448\u044C

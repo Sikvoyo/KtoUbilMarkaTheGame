@@ -1,18 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class OprosnikiBG : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] Image image;
+    [SerializeField] OprosnikiManager oprosnikiManager;
 
-    // Update is called once per frame
-    void Update()
+    public void ChangeImage()
     {
-        
+        image.sprite = oprosnikiManager.GetBackground();
     }
 }

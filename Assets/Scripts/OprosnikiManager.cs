@@ -8,6 +8,7 @@ public class OprosnikiManager : MonoBehaviour
     [SerializeField] Image dialogueSprite;
     [SerializeField] Animator animator;
 
+
     private CharacterObject characterSpeaking;
     
     DialogueSystem dialogueSystem;
@@ -22,11 +23,17 @@ public class OprosnikiManager : MonoBehaviour
         if (newCharacter == characterSpeaking) return;
 
         characterSpeaking = newCharacter;
-        dialogueSystem.SetNewDialogue(characterSpeaking);
+        animator.SetTrigger("change");
     }
 
     public CharacterObject WhoSpeaks()
     {
         return characterSpeaking;
+    }
+
+    public Sprite GetBackground()
+    {
+        dialogueSystem.SetNewDialogue(characterSpeaking);
+        return characterSpeaking.characterSprite;
     }
 }

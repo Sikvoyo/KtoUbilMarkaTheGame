@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AsukaEN
   m_EditorClassIdentifier: 
   characterName: Asuka
-  characterSprite: {fileID: 21300000, guid: 32af7386c1941bf4cb5bc5c13a83bf2f, type: 3}
+  characterSprite: {fileID: 21300000, guid: faef81b8396222c49b87e3c2c2990654, type: 3}
   dialogue:
   - phrase: Hey! If you falsely accuse me, you are not going to get away with this!
       I am (not) related in this whole situation, why are you suspecting me?
