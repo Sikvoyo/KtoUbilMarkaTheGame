@@ -5,11 +5,14 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Localization.Settings;
 
-public class Clue : MonoBehaviour, IPointerClickHandler
+public class Clue : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] List<DialoguePhrase> myDialogueRU;
     [SerializeField] List<DialoguePhrase> myDialogueEN;
     [SerializeField] Sprite mySprite;
+    [SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] AudioClip hoverSound;
+    [SerializeField] Color32 hoverColor;
 
     DialogueSystem dialogueSystem;
     DialogueText dialogueText;
@@ -45,6 +48,7 @@ public class Clue : MonoBehaviour, IPointerClickHandler
         if (isTalking) return;
 
         isTalking = true;
+        OnPointerExit(new PointerEventData(EventSystem.current));
         dialogueSystem.SetNewDialogue(myCharacter);
         dialogueText.EnableText();
         dialogueSystem.OnLastPhrase += StopTalking;
@@ -54,6 +58,19 @@ public class Clue : MonoBehaviour, IPointerClickHandler
     {
         isTalking = false;
         dialogueSystem.OnLastPhrase -= StopTalking;
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        if (isTalking) return;
+
+        spriteRenderer.color = hoverColor;
+        AudioSource.PlayClipAtPoint(hoverSound, Camera.main.transform.position);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        spriteRenderer.color = Color.white;
     }
 
     // public void OnPointerEnter(PointerEventData pointerEventData)
