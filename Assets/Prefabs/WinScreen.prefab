@@ -694,6 +694,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StartGame
       objectReference: {fileID: 0}
+    - target: {fileID: 3209001929593480049, guid: 9e0de763a7c42a04fa76553c04281496, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3209001929593480052, guid: 9e0de763a7c42a04fa76553c04281496, type: 3}
       propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
       value: 1955637288296448

@@ -129,7 +129,7 @@ public class KtoUbilManager : MonoBehaviour
         {
             Debug.LogWarning("Чё-то не так");
         }
-        handDrawnEllipse = FindObjectOfType<HandDrawnEllipse>();
-        handDrawnEllipse.OnFinishedClick += LoadStart;
+        // handDrawnEllipse = FindObjectOfType<HandDrawnEllipse>();
+        // handDrawnEllipse.OnFinishedClick += LoadStart;
     }
 }

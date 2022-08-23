@@ -33,7 +33,7 @@ MonoBehaviour:
   - phrase: It's someone else! Detective Morbius, it's your job to find out the real
       killer!
     doISayThat: 1
-  - phrase: You have 10 minutes, hurry up!
+  - phrase: You have 5 minutes, hurry up!
     doISayThat: 1
   - phrase: There are no hints, uncover this mystery yourself.
     doISayThat: 1

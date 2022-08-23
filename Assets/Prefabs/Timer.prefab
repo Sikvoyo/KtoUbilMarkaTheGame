@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd58dfd88ee9ed04fa473babe215a211, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTimeInSeconds: 600
+  startTimeInSeconds: 300
   timerText: {fileID: 4060114517637709074}
   music: {fileID: 0}
 --- !u!1 &4060114516443057895
@@ -181,7 +181,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 8
   m_TargetDisplay: 0
 --- !u!114 &4060114516443057898
 MonoBehaviour:
@@ -288,7 +288,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 10:00
+  m_text: 5:00
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8e1a22b40e0f4304e9e9af5398f39c5e, type: 2}
   m_sharedMaterial: {fileID: -2012158777932812446, guid: 8e1a22b40e0f4304e9e9af5398f39c5e, type: 2}

@@ -246,6 +246,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 0
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
@@ -307,8 +308,8 @@ MonoBehaviour:
   timeline: {fileID: 220024028}
   boomSound: {fileID: 8300000, guid: 924dba905ef4756449f3934d6948efac, type: 3}
   shotSound: {fileID: 8300000, guid: f59064af286b91a44a738f803b119357, type: 3}
-  winSound: {fileID: 8300000, guid: 2d7c3d4a5a3dba246969f24b0c7ff533, type: 3}
-  lossSound: {fileID: 8300000, guid: 88d1838f8e5200647a6852744991c80e, type: 3}
+  winSound: {fileID: 8300000, guid: 3d5802d007d8899409923a8c3f480eb8, type: 3}
+  lossSound: {fileID: 8300000, guid: 150a32cce2a93974197b4ffa37a1dccc, type: 3}
   shotLength: 5
   kUMSceneManager: {fileID: 374802014}
   monokuma: {fileID: 11400000, guid: de8929949a108d449871c0e6317d2b77, type: 2}
@@ -492,7 +493,7 @@ PrefabInstance:
     - target: {fileID: 7040650565393749133, guid: 9901798a3644fbe46a8e82156c45f0c4, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 188fc34986400604caafc54fb710897b, type: 3}
+      objectReference: {fileID: 21300000, guid: 56d8ba8efe6b81545afd488781b1d5b4, type: 3}
     - target: {fileID: 7040650565393749135, guid: 9901798a3644fbe46a8e82156c45f0c4, type: 3}
       propertyPath: m_Name
       value: Bear
@@ -905,7 +906,7 @@ PrefabInstance:
     - target: {fileID: 7040650565393749133, guid: 9901798a3644fbe46a8e82156c45f0c4, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 32af7386c1941bf4cb5bc5c13a83bf2f, type: 3}
+      objectReference: {fileID: 21300000, guid: 3272d5f1d4163df4083397a3a46ce376, type: 3}
     - target: {fileID: 7040650565393749135, guid: 9901798a3644fbe46a8e82156c45f0c4, type: 3}
       propertyPath: m_Name
       value: Asuka
@@ -1037,6 +1038,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MoveRepeatDelay: 0.5
   m_MoveRepeatRate: 0.1
+  m_XRTrackingOrigin: {fileID: 0}
   m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
   m_PointAction: {fileID: 1054132383583890850, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
   m_MoveAction: {fileID: 3710738434707379630, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
@@ -1173,7 +1175,7 @@ PrefabInstance:
     - target: {fileID: 7040650565393749133, guid: 9901798a3644fbe46a8e82156c45f0c4, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 2ddc54f677da2564eb20f90fea3f56ee, type: 3}
+      objectReference: {fileID: 21300000, guid: 2106c6440ac4d1340a3fa3cd5780ac6d, type: 3}
     - target: {fileID: 7040650565393749135, guid: 9901798a3644fbe46a8e82156c45f0c4, type: 3}
       propertyPath: m_Name
       value: Walter
@@ -2292,6 +2294,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7040650565393749133, guid: 9901798a3644fbe46a8e82156c45f0c4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0666c4ebf08ca9a4f90e3f7c9b0ad1ae, type: 3}
     - target: {fileID: 7040650565393749135, guid: 9901798a3644fbe46a8e82156c45f0c4, type: 3}
       propertyPath: m_Name
       value: Monokorob

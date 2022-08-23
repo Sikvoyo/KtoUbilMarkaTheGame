@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: WalterEN
   m_EditorClassIdentifier: 
   characterName: Walter
-  characterSprite: {fileID: 0}
+  characterSprite: {fileID: 21300000, guid: ad7f1f4ac85aaf04881366207860d05f, type: 3}
   dialogue:
   - phrase: Do you have a lawyer?
     doISayThat: 0

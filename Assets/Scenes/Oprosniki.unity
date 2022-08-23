@@ -429,7 +429,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 32af7386c1941bf4cb5bc5c13a83bf2f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c65f5caf2957a654191e3fc7a15c97c4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1546,7 +1546,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2ddc54f677da2564eb20f90fea3f56ee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: df903740e877620448b29cc0017631ea, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1596,6 +1596,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MoveRepeatDelay: 0.5
   m_MoveRepeatRate: 0.1
+  m_XRTrackingOrigin: {fileID: 0}
   m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
   m_PointAction: {fileID: 1054132383583890850, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
   m_MoveAction: {fileID: 3710738434707379630, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
@@ -1733,9 +1734,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3724870373394625930, guid: 1a5719a1b61e211459a629511af749b2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8747753444213385859}
+    - target: {fileID: 3724870373394625930, guid: 1a5719a1b61e211459a629511af749b2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GoToRoomB
+      objectReference: {fileID: 0}
     - target: {fileID: 7582271596098825319, guid: 1a5719a1b61e211459a629511af749b2, type: 3}
       propertyPath: m_SortingOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8564412113256697701, guid: 1a5719a1b61e211459a629511af749b2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8747753444213385859}
+    - target: {fileID: 8564412113256697701, guid: 1a5719a1b61e211459a629511af749b2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GoToRoomA
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a5719a1b61e211459a629511af749b2, type: 3}
@@ -1796,7 +1813,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 87bfa1ef768f21a44ad7b8ca26bc66e3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 49b38c19ec652ae4b9f8c6e1c8ea6b77, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1871,7 +1888,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 188fc34986400604caafc54fb710897b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4e3e8c3d19c516149b97e27e5deac8b8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2140,3 +2157,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87f186c2787915e4aa60a71ab7c6c397, type: 3}
+--- !u!114 &8747753444213385859 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8747753444213385861, guid: 87f186c2787915e4aa60a71ab7c6c397, type: 3}
+  m_PrefabInstance: {fileID: 8747753444213385858}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 861c27e617b87d940931091f75869704, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
