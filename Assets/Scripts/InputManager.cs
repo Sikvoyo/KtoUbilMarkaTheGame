@@ -49,4 +49,10 @@ public class InputManager : MonoBehaviour
         music.playFootsteps = false;
         FindObjectOfType<KUMSceneManager>().LoadScene("KtoUbil");
     }
+
+    public void QuitGame() 
+    {
+        Debug.Log("вышли!");
+        Application.Quit();
+    }
 }

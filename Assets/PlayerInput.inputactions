@@ -11,7 +11,8 @@
                     "id": "23be093f-a7d1-4a74-a52b-8d952b7ca0eb",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Go to room B",
@@ -19,7 +20,8 @@
                     "id": "cef17662-bbe4-46b7-ab7d-db90a1573174",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Jump to the vote",
@@ -27,7 +29,17 @@
                     "id": "138fabbc-de86-4af4-9dbf-1a8e5eec4b2a",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Hold(duration=2)"
+                    "interactions": "Hold(duration=2)",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Quit",
+                    "type": "Button",
+                    "id": "1d71257b-1f63-4cea-8c2f-1d86bc6ec56c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -61,6 +73,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Jump to the vote",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "daedcb84-d85e-4422-a4d9-1c558dd03b2c",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Quit",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

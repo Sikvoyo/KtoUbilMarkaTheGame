@@ -103,9 +103,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Timer, Assembly-CSharp
-        m_MethodName: DestroyMyself
+    m_ActionId: 138fabbc-de86-4af4-9dbf-1a8e5eec4b2a
+    m_ActionName: Player/Jump to the vote[/Keyboard/o]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8747753444213385861}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -115,8 +119,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 138fabbc-de86-4af4-9dbf-1a8e5eec4b2a
-    m_ActionName: Player/Jump to the vote[/Keyboard/o]
+    m_ActionId: 1d71257b-1f63-4cea-8c2f-1d86bc6ec56c
+    m_ActionName: Player/Quit[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
